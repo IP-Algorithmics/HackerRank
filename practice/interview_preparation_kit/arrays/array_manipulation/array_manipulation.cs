@@ -1,29 +1,15 @@
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
 using System.Linq;
+using HackerRank.Utilities;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace HackerRank.practice.interview_preparation_kit.arrays.array_manipulation
 {
     public static class ArrayManipulation
     {
-        public static long Start(string path)
-        {
-            var lines = File.ReadAllLines(path);
-            var initialData = lines[0].Split(' ').Select(int.Parse).ToList();
-            var queries = new List<int[]>();
-            for (var i = 1; i < lines.Length; i++)
-            {
-                var dataArr = lines[i].Split(' ').Select(int.Parse).ToArray();
-                queries.Add(dataArr);
-            }
-
-            return arrayManipulation(initialData[0], queries.ToArray());
-        }
-        
-        static long arrayManipulationNaive(int n, int[][] queries) {
+      
+        public static long arrayManipulationNaive(int n, int[][] queries) {
             var arr = new long[n];
             Array.Fill(arr,0);
             foreach (var query in queries)
@@ -36,8 +22,8 @@ namespace HackerRank.practice.interview_preparation_kit.arrays.array_manipulatio
 
             return arr.Max();
         }
-        
-        static long arrayManipulation(int n, int[][] queries) {
+
+        public static long arrayManipulation(int n, int[][] queries) {
             var arr = new long[n + 1];
             foreach (var query in queries)
             {
@@ -55,28 +41,24 @@ namespace HackerRank.practice.interview_preparation_kit.arrays.array_manipulatio
         
     }
 
-    public class Test
+    public class Test : TestBase
     {
-        private string relativePath = typeof(ArrayManipulation).Namespace.Replace("HackerRank","").Replace(".","/");
-        [Fact]
-        public void TestNaive()
+        public Test(ITestOutputHelper testOutputHelper) : base(testOutputHelper)
         {
-            var watch = System.Diagnostics.Stopwatch.StartNew();
-            var result = ArrayManipulation.Start($"./{relativePath}/test_case_12.txt");
-            watch.Stop();
-            var elapsedMs = watch.ElapsedMilliseconds;
-            Assert.True(elapsedMs < 5000000000);
         }
-        
+
         [Fact]
         public void Test1()
         {
-            var watch = System.Diagnostics.Stopwatch.StartNew();
-            var result = ArrayManipulation.Start($"./{relativePath}/test_case_12.txt");
-            watch.Stop();
-            
-            Debug.WriteLine(result);
-            Debug.WriteLine(watch.ElapsedMilliseconds);
+            var (item1, item2) = AlgorithmUtility.Run<int, int>(InputFilePath("test_case_12.txt"));
+            RunTest(() => ArrayManipulation.arrayManipulation(item1[0],item2.Select(x => x.ToArray()).ToArray()));
+        }
+
+        [Fact]
+        public void TestNaive()
+        {
+            var (item1, item2) = AlgorithmUtility.Run<int, int>(InputFilePath("test_case_12.txt"));
+            RunTest(() => ArrayManipulation.arrayManipulationNaive(item1[0], item2.Select(x => x.ToArray()).ToArray()));
         }
     }
 }
