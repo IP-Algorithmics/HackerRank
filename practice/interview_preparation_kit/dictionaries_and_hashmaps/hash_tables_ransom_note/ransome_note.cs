@@ -11,6 +11,7 @@ namespace HackerRank.practice.interview_preparation_kit.dictionaries_and_hashmap
     {
         public static string checkMagazine(string[] magazine, string[] note)
         {
+            // Concurrency dictionary affects performance but brings utility functions that were implemented in later versions of the .NetFramework which are currently unavailable for the online compiler
             var magazineDict = new ConcurrentDictionary<string,int>();
             foreach (var str in magazine)
             {

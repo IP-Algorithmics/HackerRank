@@ -12,6 +12,7 @@ namespace HackerRank.practice.interview_preparation_kit.dictionaries_and_hashmap
     {
         public static string twoStrings(string s1, string s2)
         {
+            // Concurrency dictionary affects performance but brings utility functions that were implemented in later versions of the .NetFramework which are currently unavailable for the online compiler
             var s1Dict = new ConcurrentDictionary<string,int>(); 
             var s2Dict = new ConcurrentDictionary<string, int>();
 
