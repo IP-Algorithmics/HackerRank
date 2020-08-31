@@ -46,8 +46,8 @@ namespace HackerRank.Utilities
 
             watch.Stop();
 
-            TestOutputHelper.WriteLine(result.ToString());
-            TestOutputHelper.WriteLine(elapsedMilliseconds.ToString());
+            TestOutputHelper.WriteLine($"Result: {result.ToString()}");
+            TestOutputHelper.WriteLine($"Elapsed Time: {elapsedMilliseconds.ToString()}");
 
             return new Tuple<T, long>(result, elapsedMilliseconds);
         }

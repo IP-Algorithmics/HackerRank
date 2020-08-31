@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using HackerRank.Utilities;
@@ -29,10 +28,8 @@ namespace HackerRank.practice.interview_preparation_kit.dictionaries_and_hashmap
                 }
                 dict.Values.Where(x => x > 1).ToList().ForEach(value => { result += value * (value - 1) / 2; });
             }
-
             return result;
         }
-
     }
 
     public class Test : TestBase
