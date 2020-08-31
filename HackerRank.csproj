@@ -20,6 +20,15 @@
       <None Update="practice\interview_preparation_kit\dictionaries_and_hashmaps\hash_tables_ransom_note\input21.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
+      <None Update="practice\interview_preparation_kit\dictionaries_and_hashmaps\sherlock_and_anagrams\input00.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="practice\interview_preparation_kit\dictionaries_and_hashmaps\sherlock_and_anagrams\input01.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="practice\interview_preparation_kit\dictionaries_and_hashmaps\sherlock_and_anagrams\input06.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
       <None Update="practice\interview_preparation_kit\dictionaries_and_hashmaps\two_strings\input.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
