@@ -47,6 +47,9 @@
       <None Update="practice\interview_preparation_kit\sorting\sorting_bubble_sort\input.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
+      <None Update="practice\interview_preparation_kit\sorting\sorting_comparator\input.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
     <ItemGroup>
