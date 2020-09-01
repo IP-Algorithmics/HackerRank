@@ -38,6 +38,12 @@
       <None Update="practice\interview_preparation_kit\dictionaries_and_hashmaps\two_strings\input.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
+      <None Update="practice\interview_preparation_kit\sorting\mark_and_toys\input2.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <None Update="practice\interview_preparation_kit\sorting\mark_and_toys\input.txt">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
       <None Update="practice\interview_preparation_kit\sorting\sorting_bubble_sort\input.txt">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
