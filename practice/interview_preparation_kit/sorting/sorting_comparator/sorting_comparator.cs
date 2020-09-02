@@ -12,7 +12,7 @@ namespace HackerRank.practice.interview_preparation_kit.sorting.sorting_comparat
     {
         public static List<Player> playerComparator(List<Player> list)
         {
-            return list.OrderByDescending(x => x.Score).ToList();
+            return list.OrderByDescending(x => x.Score).ThenByDescending(x => x.Name).ToList();
         }
 
     }
